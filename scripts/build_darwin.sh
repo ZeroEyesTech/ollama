@@ -3,7 +3,7 @@
 set -e
 
 export VERSION=${VERSION:-$(git describe --tags --first-parent --abbrev=7 --long --dirty --always | sed -e "s/^v//g")}
-export GOFLAGS="'-ldflags=-w -s \"-X=github.com/jmorganca/ollama/version.Version=$VERSION\" \"-X=github.com/jmorganca/ollama/server.mode=release\"'"
+export GOFLAGS="'-ldflags=-w -s \"-X=github.com/ZeroEyesTech/ollama/version.Version=$VERSION\" \"-X=github.com/ZeroEyesTech/ollama/server.mode=release\"'"
 
 mkdir -p dist
 
@@ -27,7 +27,7 @@ chmod +x dist/ollama
 npm install --prefix macapp
 if [ -n "$APPLE_IDENTITY" ]; then
     npm run --prefix macapp make:sign
-else 
+else
     npm run --prefix macapp make
 fi
 cp macapp/out/make/zip/darwin/universal/Ollama-darwin-universal-$VERSION.zip dist/Ollama-darwin.zip

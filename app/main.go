@@ -4,7 +4,7 @@ package main
 // go build -ldflags="-H windowsgui" .
 
 import (
-	"github.com/jmorganca/ollama/app/lifecycle"
+	"github.com/ZeroEyesTech/ollama/app/lifecycle"
 )
 
 func main() {

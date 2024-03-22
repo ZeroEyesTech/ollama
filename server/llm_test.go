@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/jmorganca/ollama/api"
-	"github.com/jmorganca/ollama/llm"
+	"github.com/ZeroEyesTech/ollama/api"
+	"github.com/ZeroEyesTech/ollama/llm"
 )
 
 // TODO - this would ideally be in the llm package, but that would require some refactoring of interfaces in the server

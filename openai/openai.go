@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/ZeroEyesTech/ollama/api"
 	"github.com/gin-gonic/gin"
-	"github.com/jmorganca/ollama/api"
 )
 
 type Error struct {

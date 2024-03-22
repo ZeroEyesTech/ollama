@@ -27,7 +27,7 @@ function checkEnv() {
     } else {
         $script:NVIDIA_DIR=$env:NVIDIA_DIR
     }
-    
+
     $script:INNO_SETUP_DIR=(get-item "C:\Program Files*\Inno Setup*\")[0]
 
     $script:DEPS_DIR="${script:SRC_DIR}\dist\windeps"
@@ -70,11 +70,11 @@ function buildOllama() {
     write-host "Building ollama CLI"
     if ($null -eq ${env:OLLAMA_SKIP_GENERATE}) {
         & go generate ./...
-        if ($LASTEXITCODE -ne 0) { exit($LASTEXITCODE)}    
+        if ($LASTEXITCODE -ne 0) { exit($LASTEXITCODE)}
     } else {
         write-host "Skipping generate step with OLLAMA_SKIP_GENERATE set"
     }
-    & go build -trimpath -ldflags "-s -w -X=github.com/jmorganca/ollama/version.Version=$script:VERSION -X=github.com/jmorganca/ollama/server.mode=release" .
+    & go build -trimpath -ldflags "-s -w -X=github.com/ZeroEyesTech/ollama/version.Version=$script:VERSION -X=github.com/ZeroEyesTech/ollama/server.mode=release" .
     if ($LASTEXITCODE -ne 0) { exit($LASTEXITCODE)}
     if ("${env:KEY_CONTAINER}") {
         & "${script:SignTool}" sign /v /fd sha256 /t http://timestamp.digicert.com /f "${script:OLLAMA_CERT}" `
@@ -89,7 +89,7 @@ function buildApp() {
     write-host "Building Ollama App"
     cd "${script:SRC_DIR}\app"
     & windres -l 0 -o ollama.syso ollama.rc
-    & go build -trimpath -ldflags "-s -w -H windowsgui -X=github.com/jmorganca/ollama/version.Version=$script:VERSION -X=github.com/jmorganca/ollama/server.mode=release" .
+    & go build -trimpath -ldflags "-s -w -H windowsgui -X=github.com/ZeroEyesTech/ollama/version.Version=$script:VERSION -X=github.com/ZeroEyesTech/ollama/server.mode=release" .
     if ($LASTEXITCODE -ne 0) { exit($LASTEXITCODE)}
     if ("${env:KEY_CONTAINER}") {
         & "${script:SignTool}" sign /v /fd sha256 /t http://timestamp.digicert.com /f "${script:OLLAMA_CERT}" `

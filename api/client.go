@@ -15,8 +15,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/jmorganca/ollama/format"
-	"github.com/jmorganca/ollama/version"
+	"github.com/ZeroEyesTech/ollama/format"
+	"github.com/ZeroEyesTech/ollama/version"
 )
 
 type Client struct {

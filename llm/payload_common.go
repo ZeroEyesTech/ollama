@@ -15,7 +15,7 @@ import (
 	"golang.org/x/exp/slices"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/jmorganca/ollama/gpu"
+	"github.com/ZeroEyesTech/ollama/gpu"
 )
 
 // Libraries names may contain an optional variant separated by '_'

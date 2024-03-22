@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"slices"
 
-	"github.com/jmorganca/ollama/api"
-	"github.com/jmorganca/ollama/gpu"
+	"github.com/ZeroEyesTech/ollama/api"
+	"github.com/ZeroEyesTech/ollama/gpu"
 )
 
 type LLM interface {

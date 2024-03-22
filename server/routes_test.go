@@ -15,10 +15,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/jmorganca/ollama/api"
-	"github.com/jmorganca/ollama/llm"
-	"github.com/jmorganca/ollama/parser"
-	"github.com/jmorganca/ollama/version"
+	"github.com/ZeroEyesTech/ollama/api"
+	"github.com/ZeroEyesTech/ollama/llm"
+	"github.com/ZeroEyesTech/ollama/parser"
+	"github.com/ZeroEyesTech/ollama/version"
 )
 
 func Test_Routes(t *testing.T) {

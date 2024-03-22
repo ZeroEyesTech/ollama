@@ -9,8 +9,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/jmorganca/ollama/app/store"
-	"github.com/jmorganca/ollama/app/tray"
+	"github.com/ZeroEyesTech/ollama/app/store"
+	"github.com/ZeroEyesTech/ollama/app/tray"
 )
 
 func Run() {

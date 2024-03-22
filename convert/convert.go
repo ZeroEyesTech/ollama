@@ -16,8 +16,8 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/jmorganca/ollama/convert/sentencepiece"
-	"github.com/jmorganca/ollama/llm"
+	"github.com/ZeroEyesTech/ollama/convert/sentencepiece"
+	"github.com/ZeroEyesTech/ollama/llm"
 )
 
 type Params struct {

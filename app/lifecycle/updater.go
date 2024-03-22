@@ -18,8 +18,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jmorganca/ollama/auth"
-	"github.com/jmorganca/ollama/version"
+	"github.com/ZeroEyesTech/ollama/auth"
+	"github.com/ZeroEyesTech/ollama/version"
 )
 
 var (

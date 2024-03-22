@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/jmorganca/ollama/api"
+	"github.com/ZeroEyesTech/ollama/api"
 )
 
 func startApp(ctx context.Context, client *api.Client) error {

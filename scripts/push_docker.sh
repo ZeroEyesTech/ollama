@@ -3,7 +3,7 @@
 set -eu
 
 export VERSION=${VERSION:-0.0.0}
-export GOFLAGS="'-ldflags=-w -s \"-X=github.com/jmorganca/ollama/version.Version=$VERSION\" \"-X=github.com/jmorganca/ollama/server.mode=release\"'"
+export GOFLAGS="'-ldflags=-w -s \"-X=github.com/ZeroEyesTech/ollama/version.Version=$VERSION\" \"-X=github.com/ZeroEyesTech/ollama/server.mode=release\"'"
 
 docker build \
     --push \
